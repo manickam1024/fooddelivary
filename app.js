@@ -1,3 +1,7 @@
+import React from "react";
+import ReactDOM from 'react-dom/client'; // React 18+ uses 'react-dom/client'
+
+
 
 const ele1=React.createElement("h2",{},"hello world!");
 
@@ -12,7 +16,7 @@ const parent=React.createElement("div",{id:"parent"},child,child1);
 
 
 
- const r=document.getElementById("root");
+ const r=document.getElementById("roots");
  const root=ReactDOM.createRoot(r);
 
 

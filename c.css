@@ -1,0 +1,21 @@
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 20px 2px 10px;
+  height: 100px;
+}
+#root {
+  display: block;
+  height: 100px;
+}
+#logo {
+  height: 100px;
+  position: relative;
+  left: 100px;
+}
+#usericon {
+  height: 100px;
+  position: relative;
+  right: 100px;
+}

@@ -8,11 +8,11 @@ const h2 = React.createElement('h2', {}, 'this is h2')
 const h3 = React.createElement('h2', {}, 'this is h3')
 
 const div = React.createElement('div', { className: 'title' }, h1, h2, h3)
+const ele1 = React.createElement('h2', {}, 'hello world! mani')
 
 const root = ReactDOM.createRoot(document.getElementById('root1'))
 
 root.render(div)
-
 // - Create the `same element using JSX`
 
 const head1 = <h1>this is h1 root2</h1>

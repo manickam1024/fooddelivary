@@ -1,13 +1,17 @@
 import { IMG_CARD } from '../utils/srcs'
 const Card = (props) => {
   const { resdata } = props
-  const { name, avgRating, cuisines } = resdata.info
+  const { name, avgRating, cuisines, cloudinaryImageId } = resdata.info
   const { slaString } = resdata.info.sla
+
+  const imgid =
+    'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/' +
+    cloudinaryImageId
 
   return (
     <div className="card">
       <div className="img">
-        <img src={IMG_CARD} alt="" />
+        <img src={imgid} alt="" />
       </div>
       <div className="card-content">
         <h2>{name}</h2>

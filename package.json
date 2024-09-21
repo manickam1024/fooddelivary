@@ -16,15 +16,11 @@
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": false
   }
-
-  ,
-    "prettier": {
-      "singleQuote": true,
-      "trailingComma": "es5",
-      "tabWidth": 2,
-      "semi": false
-    }
-  
-  
 }

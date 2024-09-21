@@ -19,7 +19,7 @@
 
 .nav-items > ul > li {
   margin: 5px;
-  font-size: 18px;
+  font-size: 15px;
   font-family: 'Montserrat', helvetica, arial, sans-serif;
   right: 10px;
 }
@@ -40,13 +40,13 @@ i.material-icons {
 
 .nav-items {
   position: relative;
-  right: 100px;
+  right: 20px;
   top: 20px;
 }
 
 .name {
   position: relative;
-  right: 270px;
+  right: 150px;
   top: 20px;
   font-family: 'Montserrat', helvetica, arial, sans-serif;
 }
@@ -58,11 +58,12 @@ i.material-icons {
   margin: 20px;
   border-radius: 20px;
   overflow: hidden;
-
+  margin-bottom: 10px;
   &:hover {
     transform: scale(0.9);
     box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.2);
   }
+  cursor: pointer;
 }
 
 .card-container {
@@ -79,7 +80,7 @@ i.material-icons {
 
 .card > .img > img {
   height: 150px;
-  width: 250px;
+  width: 100%;
   object-fit: cover;
 
   border-radius: 20px;
@@ -91,6 +92,8 @@ i.material-icons {
   position: relative;
   top: -5px;
   left: 20px;
+  display: flexbox;
+  width: max-content;
 }
 .card-content > h2 {
   margin-bottom: -5px;
@@ -103,6 +106,7 @@ i.material-icons {
 
 .card-content > h3 {
   margin-top: -5px;
+  margin-bottom: -5px;
 }
 
 .footer {
@@ -119,4 +123,101 @@ i.material-icons {
     top: 20px;
     font-family: 'Montserrat', helvetica, arial, sans-serif;
   }
+}
+
+.shimmer {
+  width: 270px;
+  height: 237px;
+  margin: 20px;
+  border-radius: 20px;
+  background-color: #f0f0f0;
+  overflow: hidden;
+}
+
+.block {
+  position: relative;
+  transform: rotate(-80deg) skew(0deg, 30deg);
+  background-color: white;
+  animation: shim 1s linear infinite;
+  height: 60px;
+  width: 350px;
+  top: 100px;
+  right: 220px;
+  opacity: 0.6;
+}
+
+@keyframes shim {
+  0% {
+    right: 220px;
+  }
+
+  100% {
+    right: -300px;
+  }
+}
+
+.shimmer-container {
+  display: flex;
+  width: 1300px;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
+  position: relative;
+  top: 50px;
+  height: max-content;
+  left: 100px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.top-rated {
+  position: relative;
+  top: 30px;
+  left: 30px;
+  height: 50px;
+  width: 100px;
+  font-family: 'Montserrat', helvetica, arial, sans-serif;
+  font-size: medium;
+  border-radius: 10px;
+  border: 1px solid black;
+  cursor: pointer;
+  background-color: white;
+}
+
+.btn {
+  position: relative;
+  top: 30px;
+  left: 30px;
+  background-color: #f0f0f0;
+  height: 50px;
+  width: 100px;
+  border-radius: 10px;
+  border: none;
+}
+
+.search-filter {
+  position: relative;
+  left: 250px;
+  top: -10px;
+}
+.search-filter > .search {
+  height: 30px;
+  width: 200px;
+  position: relative;
+  left: 20px;
+  border-radius: 10px;
+  font-family: 'Montserrat', helvetica, arial, sans-serif;
+  margin-right: 8px;
+}
+
+.search-filter > .filter {
+  height: 30px;
+  width: 100px;
+  position: relative;
+  left: 20px;
+  border-radius: 10px;
+  font-family: 'Montserrat', helvetica, arial, sans-serif;
+  cursor: pointer;
+}
+
+html {
+  overflow-x: hidden;
 }

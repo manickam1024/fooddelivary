@@ -22,6 +22,10 @@
   font-size: 15px;
   font-family: 'Montserrat', helvetica, arial, sans-serif;
   right: 10px;
+  &:hover {
+    transform: scale(0.9);
+  }
+  cursor: pointer;
 }
 
 .nav-items > ul > li > a {

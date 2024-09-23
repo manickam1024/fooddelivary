@@ -14,17 +14,23 @@ const Body = () => {
   }, [])
 
   async function after() {
-    const newdata = await fetch(
-      'https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9352403&lng=77.624532&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING'
-    )
-    const json = await newdata.json()
+    try {
+      const newdata = await fetch(
+        'https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9352403&lng=77.624532&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING'
+      )
+      const json = await newdata.json()
 
-    setreslist(
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    )
-    setfilterd(
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    )
+      setreslist(
+        json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants
+      )
+      setfilterd(
+        json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants
+      )
+    } catch (e) {
+      console.log('failed to fetch')
+    }
   }
 
   if (!reslist.length) {

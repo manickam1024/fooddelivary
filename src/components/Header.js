@@ -1,10 +1,16 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { IMG_LOGO } from '../utils/srcs'
+import { Link } from 'react-router-dom'
 const Header = () => {
   const [s, news] = useState('login')
+
   return (
     <div className="header">
-      <img src={IMG_LOGO} className="logo" />
+      <img
+        src={IMG_LOGO}
+        className="logo"
+        style={{ position: 'relative', left: '20px' }}
+      />
       <div className="name">
         <h2>food ordering app</h2>
       </div>
@@ -23,22 +29,22 @@ const Header = () => {
           </li>
           <li>
             <i className="material-icons">home</i>
-            <a href="">Home</a>
+            <Link to="/">Home</Link>
           </li>
 
           <li>
             <i className="material-icons">arrow_back_ios</i>
 
-            <a href="">About us</a>
+            <Link to="/about">About us</Link>
           </li>
           <li>
             <i className="material-icons"> shopping_cart</i>
-            <a href="">Cart</a>
+            <Link to="/Cart">cart</Link>
           </li>
 
           <li>
             <i className="material-icons"> person </i>
-            <a href="">Profiles</a>
+            <Link to="/Profile">Profiles</Link>
           </li>
         </ul>
       </div>
